@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 """Compute GC content for each sequence in a FASTA file.
 
@@ -38,8 +39,7 @@ def main():
         print(__doc__)
         sys.exit(1)
     for name, seq in read_fasta(sys.argv[1]):
-        print(f"{name}\tGC = {100 * gc_content(seq):.1f}%")
-
+        print(f"{name}\tGC = {100 * gc_content(seq):.1f}%\tlength = {len(seq)}")
 
 if __name__ == "__main__":
     main()
